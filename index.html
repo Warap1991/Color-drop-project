@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color-drop</title>
+    <style>
+        h1{
+            text-decoration: underline green;
+            justify-content: center;
+            text-align: center;
+        }
+        section{
+            width: 100%;
+            /*height:100vh*/
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .loader{
+            width:300px;
+            height: 100px;
+            background-color: #000;
+            position: relative;
+            filter: blur(10px) contrast(20);
+        }
+        .dropyellow, .dropred{
+            width: 70px;
+            height: 70px;
+            border-radius: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .dropyellow{
+            background-color: #f9fd00;
+            left: 10%;
+            animation: aniyellow ease-in-out infinite 2.5s;
+        }
+        .dropred{
+            background-color: #f00;
+            right: 10%;
+            animation: anired ease-in-out infinite 2.5s;
+        }
+        @keyframes aniyellow{
+            0%{left:10%}
+            50%{left:45%}
+            1000%{left:10%}
+        }
+        @keyframes anired{
+            0%{right:10%}
+            50%{right:45%}
+            1000%{right:10%}
+        }
+    </style>
+</head>
+<body>
+    <h1>THIS IS A COLOR DROP PROJECT (HTML and CSS)</h1>
+    <section>
+        <div class="loader">
+            <div class="dropyellow"></div>
+            <div class="dropred"></div>
+        </div>
+    </section>
+</body>
+</html>
